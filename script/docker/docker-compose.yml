@@ -78,7 +78,7 @@ services:
       # 时区上海
       TZ: Asia/Shanghai
       # 管理后台用户名
-      MINIO_ACCESS_KEY: ruoyi
+      MINIO_ACCESS_KEY: cprams
       # 管理后台密码，最小8个字符
       MINIO_SECRET_KEY: ruoyi123
       # https需要指定域名
@@ -100,51 +100,51 @@ services:
     network_mode: "host"
 
   ruoyi-server1:
-    image: ruoyi/ruoyi-server:4.3.0
-    container_name: ruoyi-server1
+    image: cprams/cprams-server:4.3.0
+    container_name: cprams-server1
     environment:
       # 时区上海
       TZ: Asia/Shanghai
       SERVER_PORT: 8080
     volumes:
       # 配置文件
-      - /docker/server1/logs/:/ruoyi/server/logs/
+      - /docker/server1/logs/:/cprams/server/logs/
     privileged: true
     network_mode: "host"
 
   ruoyi-server2:
-    image: "ruoyi/ruoyi-server:4.3.0"
-    container_name: ruoyi-server2
+    image: "cprams/cprams-server:4.3.0"
+    container_name: cprams-server2
     environment:
       # 时区上海
       TZ: Asia/Shanghai
       SERVER_PORT: 8081
     volumes:
       # 配置文件
-      - /docker/server2/logs/:/ruoyi/server/logs/
+      - /docker/server2/logs/:/cprams/server/logs/
     privileged: true
     network_mode: "host"
 
   ruoyi-monitor-admin:
-    image: ruoyi/ruoyi-monitor-admin:4.3.0
-    container_name: ruoyi-monitor-admin
+    image: cprams/cprams-monitor-admin:4.3.0
+    container_name: cprams-monitor-admin
     environment:
       # 时区上海
       TZ: Asia/Shanghai
     volumes:
       # 配置文件
-      - /docker/monitor/logs/:/ruoyi/monitor/logs
+      - /docker/monitor/logs/:/cprams/monitor/logs
     privileged: true
     network_mode: "host"
 
   ruoyi-xxl-job-admin:
-    image: ruoyi/ruoyi-xxl-job-admin:4.3.0
-    container_name: ruoyi-xxl-job-admin
+    image: cprams/cprams-xxl-job-admin:4.3.0
+    container_name: cprams-xxl-job-admin
     environment:
       # 时区上海
       TZ: Asia/Shanghai
     volumes:
       # 配置文件
-      - /docker/xxljob/logs/:/ruoyi/xxljob/logs
+      - /docker/xxljob/logs/:/cprams/xxljob/logs
     privileged: true
     network_mode: "host"

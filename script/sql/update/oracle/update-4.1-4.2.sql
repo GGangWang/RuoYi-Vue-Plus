@@ -7,6 +7,6 @@ update sys_oss_config set endpoint = 's3-cn-north-1.qiniucs.com', region = '' wh
 update sys_oss_config set endpoint = 'oss-cn-beijing.aliyuncs.com' where oss_config_id = 3;
 update sys_oss_config set endpoint = 'cos.ap-beijing.myqcloud.com' where oss_config_id = 4;
 
-insert into sys_oss_config values (5, 'image', 'ruoyi', 'ruoyi123', 'ruoyi', 'image', '127.0.0.1:9000', 'N', '', '1', '', NULL, 'admin', sysdate, 'admin', sysdate, '');
+insert into sys_oss_config values (5, 'image', 'cprams', 'ruoyi123', 'cprams', 'image', '127.0.0.1:9000', 'N', '', '1', '', NULL, 'admin', sysdate, 'admin', sysdate, '');
 
 ALTER TABLE "GEN_TABLE_COLUMN" MODIFY ("TABLE_ID" NUMBER(20,0));
